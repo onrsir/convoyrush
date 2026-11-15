@@ -1,9 +1,54 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Convoy Rush</title>
-<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1b1b1b;background:#fff}</style>
-</head><body>
-<h1>Convoy Rush</h1>
-<p>Jump from truck to truck across a speeding convoy and reach the finish without touching the ground.</p>
-<p><a href="privacy.html">Privacy Policy</a> · Support: <a href="mailto:oonursir@gmail.com">oonursir@gmail.com</a></p>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Convoy Rush: Truck Jump - Play free on Google Play</title>
+<meta name="description" content="Jump from truck to truck across a speeding convoy. Don't touch the ground! 100+ levels, free to play on Android.">
+<meta property="og:title" content="Convoy Rush: Truck Jump">
+<meta property="og:description" content="Jump from truck to truck. Don't touch the ground! 100+ levels, free to play.">
+<meta property="og:image" content="https://onrsir.github.io/convoyrush/assets/poster.jpg">
+<meta property="og:url" content="https://onrsir.github.io/convoyrush/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icon.png">
+<script>
+// Android visitors go straight to the Play Store. ?src=yt|tt|ig is passed on as utm_source (Play Console > acquisition).
+(function () {
+  var q = new URLSearchParams(location.search), src = q.get('src') || 'web';
+  var ref = '&referrer=' + encodeURIComponent('utm_source=' + src + '&utm_medium=social&utm_campaign=landing');
+  var id = 'com.sir.convoyrush';
+  window.PLAY = 'https://play.google.com/store/apps/details?id=' + id + ref;
+  if (/android/i.test(navigator.userAgent) && !q.has('stay')) {
+    location.href = 'market://details?id=' + id + ref;            // Play app
+    setTimeout(function () { location.replace(window.PLAY); }, 700); // in-app browsers that block market://
+  }
+})();
+</script>
+<style>
+@font-face{font-family:Russo;src:url(assets/RussoOne-Regular.ttf)}
+:root{--bg:#0b0f1a;--card:#161d2e;--fg:#f5f7fa;--mute:#9aa6bc;--a:#ffc93c;--b:#ff8a1f}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:460px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) 16px 28px;text-align:center}
+.top{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:14px}
+.top img{width:56px;height:56px;border-radius:14px}
+h1{font:400 30px/1 Russo,"Arial Black",sans-serif;margin:0;text-align:left}
+h1 b{font-weight:400;background:linear-gradient(var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{margin:4px 0 0;color:var(--mute);font-size:14px;text-align:left}
+video{width:100%;max-width:300px;aspect-ratio:9/16;border-radius:18px;background:#000;display:block;margin:0 auto 18px;box-shadow:0 0 0 1px #ffffff1a}
+.cta{display:block;font:400 22px Russo,sans-serif;color:#1a1205;text-decoration:none;background:linear-gradient(var(--a),var(--b));
+  border-radius:16px;padding:16px;box-shadow:0 5px 0 #b85c00,0 0 30px #ff8a1f66}
+.cta small{display:block;font:600 13px -apple-system,Segoe UI,Roboto,sans-serif;margin-top:2px}
+ul{list-style:none;padding:0;margin:22px 0;color:var(--fg);font-size:15px;line-height:1.9}
+.ios{color:var(--mute);font-size:13px}
+footer{margin-top:22px;font-size:13px;color:var(--mute)}
+footer a{color:var(--mute)}
+</style></head><body><main>
+<div class="top"><img src="assets/icon.png" alt="Convoy Rush icon">
+<div><h1><b>CONVOY</b> RUSH</h1><p class="tag">Jump the convoy. Don't touch the ground.</p></div></div>
+<video src="assets/trailer.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline></video>
+<a class="cta" id="play" href="https://play.google.com/store/apps/details?id=com.sir.convoyrush">PLAY FREE<small>Get it on Google Play</small></a>
+<ul><li>🚚 Jump from truck to truck</li><li>🏁 100+ levels across many worlds</li><li>⚡ 14 abilities to unlock</li></ul>
+<p class="ios">iPhone version coming soon.</p>
+<footer><a href="privacy.html">Privacy Policy</a> · Support: <a href="mailto:oonursir@gmail.com">oonursir@gmail.com</a></footer>
+</main>
+<script>document.getElementById('play').href = window.PLAY;</script>
 </body></html>
